@@ -243,5 +243,30 @@
          .catch(error => console.error('Error!', error.message))
      })
    </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+   <script>
+   VANTA.BIRDS({
+     el: "#header",
+     mouseControls: true,
+     touchControls: true,
+     gyroControls: false,
+     minHeight: 200.00,
+     minWidth: 200.00,
+     scale: 1.00,
+     scaleMobile: 1.00,
+     backgroundColor: 0xc0c0c,
+     color1: 0xfc0d44,
+     color2: 0x9b1879,
+     colorMode: "lerpGradient",
+     birdSize: 1.30,
+     wingSpan: 20.00,
+     speedLimit: 8.00,
+     separation: 26.00,
+     alignment: 17.00,
+     cohesion: 17.00,
+     quantity: 4.00
+   })
+   </script>
 </body>
 </html>
