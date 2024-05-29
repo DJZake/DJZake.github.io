@@ -3,17 +3,29 @@
 <head>
     <meta name="google-site-verification" content="QfWuf7cpbjT5WfwnuLAnqLj1ICp1ALWCsXfhsNjEKhk" />
     <meta name="keywords" content="Alen Joseph, College of Engineering,College of Engineering Munnar, Alen, Joseph" />
-
+    <link rel="shortcut icon" href="images/Alen joseph.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alen Joseph</title>
     <link rel="icon" type="image/png" href="/images/Alen joseph.png">
-
+    <link rel="preload" href="main-img.png" as="image">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/04cf6307fd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <!-- preloader -->  
+    <div>
+        <div class = "preloader-container">
+            <div class="wrapper">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="content">
     <!-- Header-section -->
     <div id="header">
         <div class="container">
@@ -36,7 +48,7 @@
         </div>
     </div>
     <!-- Header-section-end -->
-
+<br><br><br>
     <!-- About -->
     <div id="about">
         <div class="container">
@@ -194,7 +206,7 @@
         </div>
     </div>
      
-
+    </div>
 
 
      <script>
@@ -229,24 +241,26 @@
 
 
      </script>
-     <script>
-     const scriptURL = 'https://script.google.com/macros/s/AKfycbyz4hVvdHs1I-YGPIi2vXqYDHFH0hXnTwTVdFO84hjEWb5SxNxPbtzsHJoknzDgyAjS/exec'
-     const form = document.forms['submit-to-google-sheet']
-     const message = document.getElementById("message")
-   
-     form.addEventListener('submit', e => {
-       e.preventDefault()
-       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-         .then(response => {
-            message.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                message.innerHTML = ""
-            },5000)
-            form.reset()
-         })
-         .catch(error => console.error('Error!', error.message))
-     })
-   </script>
+
+
+<script>
+    const preloader = document.querySelector(".preloader-container");
+    const content = document.querySelector(".content");
+    const PRELOAD_TIME = 3000; //3sec
+    window.onload = () => {
+        content.style.display = "none";
+        preloader.style.display = "flex";
+        setTimeout(()=>{
+            content.style.display = "block";
+            preloader.style.display = "none";
+        }, PRELOAD_TIME)
+    }
+</script>
+
+
+
+
+   <!-- backgourd -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
    <script>
